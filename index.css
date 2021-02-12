@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #2A2929 !important;
+}
+
+p{
+    font-family: 'Satisfy', cursive;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Cinzel', serif;
+}
+
+.hidden{
+    display: none;
+}
+
+#banner{
+    position: relative;
+    height: 800px;
+    background-color: #2A2929;
+    background-image: url("Fotos/B1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.wave{
+    position: absolute;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+}
+
+.glass{
+    background: rgba(255, 255, 255, 0.30) !important;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.30) !important;
+    backdrop-filter: blur(2px) !important;
+}
+
+.timer{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    bottom: 0;
+    color: white;
+}
+
+/* Galeria */
+
+.cont{
+    width: 90% !important;
+}
+
+.rowf{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.rowf .column{
+    flex: 33.3%;
+    width: auto;
+    overflow: hidden;
+    padding: 0 4px;
+    height: 100%;
+}
+
+.rowf .column img{
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+    cursor: pointer;
+    filter: grayscale(1) brightness(0.5);
+    border-radius: 5px;
+    transition: 0.3s linear;
+}
+
+.rowf .column img:hover{
+    filter: grayscale(0) brightness(1);
+}
+
+@media only screen and (max-width: 800px){
+    .rowf .column{
+        flex: 50%;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    #banner{
+        background-size: cover;
+        background-position-x: -600px;
+    }
+
+    .rowf .column{
+        flex: 100%;
+    }
+
+    .rowf .column img{
+        filter: grayscale(0) brightness(1);
+    }
+}
